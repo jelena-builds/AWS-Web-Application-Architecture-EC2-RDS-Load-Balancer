@@ -1,55 +1,59 @@
 # AWS Web Application Architecture Project
 
 ## Overview
-This project demonstrates a multi-tier cloud architecture using AWS services. It includes a web server, database, load balancing, and monitoring components.
+This project shows a multi-tier web application architecture built on AWS.
+It includes a web server, a relational database, load balancing, and basic monitoring.
 
 ---
 
 ## Architecture Components
-- EC2 (Amazon Linux, NGINX, PHP)
-- RDS (MySQL)
+- Amazon EC2 (Amazon Linux, NGINX, PHP)
+- Amazon RDS (MySQL)
 - Application Load Balancer
-- CloudWatch (monitoring and alarms)
+- Amazon CloudWatch (monitoring and alarms)
 
 ---
 
 ## Architecture Flow
-User → Load Balancer → EC2 Web Server → RDS Database
+User → Application Load Balancer → EC2 (Web Server) → RDS (MySQL)
 
 ---
 
-## Features
-- Dynamic web application connected to RDS
-- Secure communication between EC2 and database
-- Load-balanced traffic handling
-- CloudWatch alarm for CPU monitoring
+## Functionality
+- Deployed a dynamic web application connected to RDS
+- Configured secure communication between EC2 and database
+- Implemented load balancing for traffic distribution
+- Configured CloudWatch alarm for CPU monitoring
 
 ---
 
-## Implementation Steps
+## Configuration Steps
 
-### 1. EC2 Setup
-- Deployed Linux server
-- Installed NGINX and PHP
 
-### 2. RDS Setup
-- Created MySQL database instance
-- Configured connectivity and security groups
+### EC2 Setup
+- Launched an Amazon Linux EC2 instance
+- Installed and configured NGINX and PHP
 
-### 3. Database Integration
-- Connected EC2 to RDS
+### RDS Setup
+- Created a MySQL RDS instance
+- Configured security groups to allow access from EC2
+- 
+### Database Integration
+- Connected EC2 instance to RDS database
 - Created database and tables
 - Inserted and queried data
+  
+### Web Application
+- Created a simple PHP application to display data from the database
 
-### 4. Web Application
-- Built simple PHP page to display database data
-
-### 5. Load Balancer
-- Created Application Load Balancer
+### Load Balancer
+- Created an Application Load Balancer
 - Configured target group and health checks
-
-### 6. Monitoring
-- Configured CloudWatch alarm for CPU utilization
+- Verified application availability using the Load Balancer DNS  
+- Confirmed instance health status in the target group  
+  
+### Monitoring
+- Configured a CloudWatch alarm for CPU utilization
 
 ---
 
@@ -79,13 +83,12 @@ User → Load Balancer → EC2 Web Server → RDS Database
 ---
 
 ## Key Skills Demonstrated
-- Cloud architecture design
-- EC2 and Linux server management
-- Database integration (RDS)
-- Load balancing concepts
-- Monitoring and alerting
-- AWS security best practices (IAM, Security Groups)
-
+- Basic cloud architecture design
+- EC2 and Linux server configuration
+- RDS database setup and integration
+- Load balancing using Application Load Balancer
+- Monitoring using CloudWatch
+- Security group configuration and access control
 ---
 
 ## Author
